@@ -1,0 +1,12 @@
+export { default as AboutSection } from '@/src/_components/template/about-section';
+export { default as ContactSection } from '@/src/_components/template/contact-section';
+export { default as Decorations } from '@/src/_components/template/decorations';
+export { default as ExperienceSection } from '@/src/_components/template/experience-section';
+export { default as HeroSection } from '@/src/_components/template/hero-section';
+export { default as MarqueeStrip } from '@/src/_components/template/marquee-strip';
+export { default as MobileMenu } from '@/src/_components/template/mobile-menu';
+export { default as Navbar } from '@/src/_components/template/navbar';
+export { default as ProjectsSection } from '@/src/_components/template/projects-section';
+export { default as SchemaJsonLd } from '@/src/_components/template/schema-jsonld';
+export { default as SectionHeader } from '@/src/_components/template/section-header';
+export { default as TemplateFooter } from '@/src/_components/template/template-footer';
