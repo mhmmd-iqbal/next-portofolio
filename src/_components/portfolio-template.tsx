@@ -1,6 +1,6 @@
 'use client';
 
-import type { FormEvent, MouseEvent } from 'react';
+import type { SubmitEvent, MouseEvent } from 'react';
 import { useEffect, useRef, useState } from 'react';
 
 import {
@@ -69,7 +69,7 @@ export default function PortfolioTemplate() {
     closeMenu();
   };
 
-  const handleContactSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleContactSubmit = (event: SubmitEvent<HTMLFormElement>) => {
     event.preventDefault();
     const form = event.currentTarget;
     const formData = new FormData(form);
