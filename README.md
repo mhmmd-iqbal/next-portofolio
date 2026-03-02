@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Muhammad Iqbal Portfolio
 
-## Getting Started
+Personal portfolio website built with Next.js App Router, TypeScript, and custom component styling.
 
-First, run the development server:
+## Tech Stack
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS v4 (with custom CSS theme system)
+- Bun (package manager and script runner)
+
+## Run Locally
+
+### Prerequisites
+
+- Bun `>= 1.3`
+
+### Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+bun install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+bun run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open `http://localhost:3000`.
 
-## Learn More
+## Scripts
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+bun run dev     # Start development server
+bun run lint    # Run ESLint
+bun run build   # Create production build
+bun run start   # Start production server
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```text
+src/
+  app/
+    layout.tsx
+    page.tsx
+    styles/
+      globals.css
+      themes.css
+  _components/
+    portfolio-template.tsx
+    template/
+      hero-section.tsx
+      about-section.tsx
+      experience-section.tsx
+      projects-section.tsx
+      contact-section.tsx
+      navbar.tsx
+      mobile-menu.tsx
+      template-footer.tsx
+  _hooks/
+    use-theme.ts
+    use-active-section.ts
+    use-navbar-scrolled.ts
+    use-body-scroll-lock.ts
+    use-reveal-on-scroll.ts
+  lib/
+    template-data.ts
+```
 
-## Deploy on Vercel
+## Customize Content
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Most content is centralized in:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `src/lib/template-data.ts`
+
+Update this file to edit:
+
+- Profile and contact info
+- Navigation items and section IDs
+- Skill groups
+- Experience timeline
+- Projects and category filters
+- Marquee technologies
+
+## Styling
+
+- Main design tokens and section styling: `src/app/styles/themes.css`
+- Base global styles: `src/app/styles/globals.css`
+
+## Metadata and SEO
+
+SEO metadata is defined in:
+
+- `src/app/layout.tsx`
+
+Update title, description, Open Graph, Twitter card, and canonical URL there.
+
+## Notes
+
+- Contact form uses a `mailto:` flow from the client side.
+- Theme toggle state is handled on the client via custom hooks.

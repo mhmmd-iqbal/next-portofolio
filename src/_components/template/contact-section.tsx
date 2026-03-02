@@ -21,7 +21,7 @@ export default function ContactSection({ sent, onSubmit }: ContactSectionProps) 
               </h2>
               <p className="contact-p">
                 Available for full-time roles and freelance projects. Especially interested in
-                backend-heavy systems, fintech, and AI-integrated platforms.
+                backend systems, enterprise, and AI-integrated platforms.
               </p>
               <div className="contact-links">
                 <a href="mailto:mhmmd.iqbal.june@gmail.com" className="contact-link">

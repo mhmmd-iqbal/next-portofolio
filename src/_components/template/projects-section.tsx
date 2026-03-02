@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import type { FilterItem, ProjectItem } from '@/src/lib/template-data';
+import { PORTFOLIO_PREVIEW_URL, type FilterItem, type ProjectItem } from '@/src/lib/template-data';
 
 import SectionHeader from '@/src/_components/template/section-header';
 
@@ -36,6 +36,17 @@ export default function ProjectsSection({
             </button>
           ))}
         </div>
+        {/* <div className="projects-preview reveal d1">
+          <span>Need full visual previews?</span>
+          <a
+            href={PORTFOLIO_PREVIEW_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="projects-preview-link"
+          >
+            Open Portfolio File ↗
+          </a>
+        </div> */}
         <div className="projects-grid" id="projects-grid">
           {filteredProjects.map((project) => (
             <article key={project.name} className={`proj-card ${project.featured ? 'featured' : ''}`.trim()}>

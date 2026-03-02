@@ -1,6 +1,6 @@
 import type { MouseEvent } from 'react';
 
-import type { NavItem, SectionId } from '@/src/lib/template-config';
+import type { NavItem, SectionId } from '@/src/lib/template-data';
 import type { Theme } from '@/src/_hooks/use-theme';
 import { PERSON_JSON_LD } from '@/src/lib/template-data';
 

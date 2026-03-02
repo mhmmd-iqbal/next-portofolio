@@ -1,4 +1,4 @@
-import { MARQUEE, PERSON_JSON_LD, PROJECTS } from '@/src/lib/template-data';
+import { MARQUEE, PERSON_JSON_LD, PORTFOLIO_PREVIEW_URL, PROJECTS } from '@/src/lib/template-data';
 import type { MouseEvent } from 'react';
 
 type HeroSectionProps = {
@@ -20,11 +20,14 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
         </h1>
         <p className="hero-desc">
           I build scalable backend systems, real-time applications, and modern web platforms. 5+
-          years crafting products across fintech, ERP, CRM, and AI-driven spaces.
+          years crafting products across ERP, CRM, and AI-driven spaces.
         </p>
         <div className="hero-actions">
           <a href="#projects" className="btn-primary" onClick={(event) => onNavigate(event, 'projects')}>
             View Projects →
+          </a>
+          <a href={PORTFOLIO_PREVIEW_URL} target="_blank" className="btn-ghost" title="View Portfolio PDF">
+            View Portfolio ↗
           </a>
           <a href="#contact" className="btn-ghost" onClick={(event) => onNavigate(event, 'contact')}>
             Get in touch

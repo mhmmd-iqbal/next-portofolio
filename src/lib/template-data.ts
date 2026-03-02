@@ -47,6 +47,9 @@ export const NAV_ITEMS: NavItem[] = [
 
 export const SECTION_IDS: SectionId[] = ['hero', 'about', 'experience', 'projects', 'contact'];
 
+export const PORTFOLIO_PREVIEW_URL =
+  'https://drive.google.com/file/d/1AIQN1ICP91EXq81S5qRa9s81e0ZsfDcx/view?usp=sharing';
+
 export const PERSON_JSON_LD = {
   '@context': 'https://schema.org',
   '@type': 'Person',
