@@ -1,7 +1,8 @@
 import type { MouseEvent } from 'react';
 
-import type { NavItem, SectionId } from '@/src/_components/template/template-config';
+import type { NavItem, SectionId } from '@/src/lib/template-config';
 import type { Theme } from '@/src/_hooks/use-theme';
+import { PERSON_JSON_LD } from '@/src/lib/template-data';
 
 type MobileMenuProps = {
   open: boolean;
@@ -43,15 +44,15 @@ export default function MobileMenu({
         ))}
       </nav>
       <div className="mobile-bottom">
-        <a href="mailto:mhmmd.iqbal.june@gmail.com" className="mobile-hire" onClick={onClose}>
+        <a href={`mailto:${PERSON_JSON_LD.email}`} className="mobile-hire" onClick={onClose}>
           Hire Me →
         </a>
         <div className="mobile-contacts">
-          <a href="tel:+6282165678664" className="mobile-contact-pill" onClick={onClose}>
+          <a href={`tel:${PERSON_JSON_LD.telephone.replace(/\s|-/g, '')}`} className="mobile-contact-pill" onClick={onClose}>
             📱 WhatsApp
           </a>
           <a
-            href="https://linkedin.com/in/mhmmd-iqbal"
+            href={PERSON_JSON_LD.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             className="mobile-contact-pill"

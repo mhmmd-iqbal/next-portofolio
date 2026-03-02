@@ -13,10 +13,8 @@ import {
   MobileMenu,
   Navbar,
   ProjectsSection,
-  SchemaJsonLd,
   TemplateFooter,
 } from '@/src/_components/template';
-import { NAV_ITEMS, SECTION_IDS, type SectionId } from '@/src/_components/template/template-config';
 import {
   useActiveSection,
   useBodyScrollLock,
@@ -25,12 +23,22 @@ import {
   useRevealOnScroll,
   useTheme,
 } from '@/src/_hooks';
-import { EXPERIENCES, FILTERS, MARQUEE, PROJECTS, SKILL_GROUPS } from '@/src/lib/template-data';
+import {
+  EXPERIENCES,
+  FILTERS,
+  MARQUEE,
+  PROJECTS,
+  SKILL_GROUPS,
+  NAV_ITEMS,
+  SECTION_IDS,
+  type SectionId
+} from '@/src/lib/template-data';
 
 type FilterValue = (typeof FILTERS)[number]['val'];
 
 export default function PortfolioTemplate() {
   const { theme, toggleTheme } = useTheme();
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeFilter, setActiveFilter] = useState<FilterValue>('all');
   const [sent, setSent] = useState(false);
@@ -101,7 +109,6 @@ export default function PortfolioTemplate() {
 
   return (
     <>
-      <SchemaJsonLd />
       <Decorations cursorRef={cursorRef} cursorRingRef={cursorRingRef} />
 
       <Navbar

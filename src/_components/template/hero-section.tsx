@@ -1,3 +1,4 @@
+import { MARQUEE, PERSON_JSON_LD, PROJECTS } from '@/src/lib/template-data';
 import type { MouseEvent } from 'react';
 
 type HeroSectionProps = {
@@ -12,10 +13,10 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
           <div className="avail-dot"></div>
           Available for new projects
         </div>
-        <div className="hero-tag">Full-Stack Engineer · Yogyakarta, Indonesia</div>
+        <div className="hero-tag">{PERSON_JSON_LD.jobTitle} </div>
         <h1 className="hero-h1" id="hero-h1">
-          <span className="block">Muhammad</span>
-          <span className="block outline">Iqbal</span>
+          <span className="block">{PERSON_JSON_LD.firstName}</span>
+          <span className="block outline">{PERSON_JSON_LD.lastName}</span>
         </h1>
         <p className="hero-desc">
           I build scalable backend systems, real-time applications, and modern web platforms. 5+
@@ -35,7 +36,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
             <div className="stat-label">Years Experience</div>
           </div>
           <div>
-            <div className="stat-num">13+</div>
+            <div className="stat-num">{PROJECTS.length}+</div>
             <div className="stat-label">Projects Shipped</div>
           </div>
           <div>
@@ -43,7 +44,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
             <div className="stat-label">Companies Served</div>
           </div>
           <div>
-            <div className="stat-num">10+</div>
+            <div className="stat-num">{MARQUEE.length}+</div>
             <div className="stat-label">Tech Mastered</div>
           </div>
         </div>

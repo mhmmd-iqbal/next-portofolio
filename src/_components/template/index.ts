@@ -7,6 +7,5 @@ export { default as MarqueeStrip } from '@/src/_components/template/marquee-stri
 export { default as MobileMenu } from '@/src/_components/template/mobile-menu';
 export { default as Navbar } from '@/src/_components/template/navbar';
 export { default as ProjectsSection } from '@/src/_components/template/projects-section';
-export { default as SchemaJsonLd } from '@/src/_components/template/schema-jsonld';
 export { default as SectionHeader } from '@/src/_components/template/section-header';
 export { default as TemplateFooter } from '@/src/_components/template/template-footer';

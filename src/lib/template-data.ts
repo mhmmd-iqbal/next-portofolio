@@ -30,26 +30,61 @@ export type FilterItem = {
   val: 'all' | 'enterprise' | 'fintech' | 'ai' | 'govtech';
 };
 
+export type SectionId = 'hero' | 'about' | 'experience' | 'projects' | 'contact';
+
+export type NavItem = {
+  id: Exclude<SectionId, 'hero'>;
+  label: string;
+  num: string;
+};
+
+export const NAV_ITEMS: NavItem[] = [
+  { id: 'about', label: 'About', num: '01' },
+  { id: 'experience', label: 'Experience', num: '02' },
+  { id: 'projects', label: 'Projects', num: '03' },
+  { id: 'contact', label: 'Contact', num: '04' },
+];
+
+export const SECTION_IDS: SectionId[] = ['hero', 'about', 'experience', 'projects', 'contact'];
+
+export const PERSON_JSON_LD = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Muhammad Iqbal',
+  firstName: 'Muhammad',
+  lastName: 'Iqbal',
+  jobTitle: 'Full-Stack Engineer',
+  email: 'mhmmd.iqbal.june@gmail.com',
+  telephone: '+62 821-6567-8664',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Yogyakarta',
+    addressCountry: 'ID',
+  },
+  url: 'https://mhmmd-iqbal.dev',
+  linkedin: 'https://linkedin.com/in/mhmmd-iqbal',
+} as const;
+
+
 export const MARQUEE = [
   'Laravel',
   'Node.js',
   'Next.js',
   'PostgreSQL',
-  'React',
   'Livewire',
   'Socket.IO',
   'MongoDB',
-  'TailwindCSS',
   'Filament',
-  'CI/CD',
+  'Docker',
   'Redis',
+  'Fiber'
 ];
 
 export const SKILL_GROUPS: SkillGroup[] = [
-  { cat: 'Backend', items: ['Laravel', 'Node.js', 'Express.js', 'CodeIgniter', 'REST APIs', 'Socket.IO'] },
-  { cat: 'Frontend', items: ['Next.js', 'React.js', 'Livewire', 'Filament', 'TailwindCSS'] },
+  { cat: 'Backend', items: ['Laravel', 'Node.js', 'Express.js', 'CodeIgniter', 'Fiber'] },
+  { cat: 'Frontend', items: ['Next.js', 'Livewire', 'Filament', 'TailwindCSS'] },
   { cat: 'Databases', items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Firebase'] },
-  { cat: 'DevOps & Tools', items: ['VPS / Linux', 'CI/CD', 'Cloudflare', 'S3 Storage', 'Supervisor'] },
+  { cat: 'DevOps & Tools', items: ['VPS / Linux', 'CI/CD', 'Docker', 'Minio Storage', 'Supervisor'] },
 ];
 
 export const EXPERIENCES: ExperienceItem[] = [
@@ -64,7 +99,7 @@ export const EXPERIENCES: ExperienceItem[] = [
       'Improved database queries and optimized API performance across multiple products.',
       'Integrated external APIs and developed reusable service layers.',
     ],
-    tech: ['NodeJS', 'NextJS', 'Laravel', 'Filament', 'Livewire', 'PostgreSQL', 'SocketIO', 'Cloudflare'],
+    tech: ['NodeJS', 'NextJS', 'Laravel', 'Filament', 'Livewire', 'PostgreSQL', 'SocketIO', 'Docker'],
   },
   {
     company: 'PT. Via Pulsa Global Indonesia',

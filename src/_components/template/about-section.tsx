@@ -29,11 +29,6 @@ export default function AboutSection({ skillGroups }: AboutSectionProps) {
               enterprise systems. Previously at Majoo Teknologi and Via Pulsa Global, leading
               full-stack development of complex multi-module applications.
             </p>
-            <p>
-              Outside code, I&apos;ve competed nationally in informatics olympiads and represented my
-              polytechnic in English competitions. Great engineering starts with clear thinking and
-              clear communication.
-            </p>
           </div>
           <div className="reveal d2" id="skills-grid">
             {skillGroups.map((group) => (

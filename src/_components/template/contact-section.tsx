@@ -1,8 +1,8 @@
-import type { FormEvent } from 'react';
+import type { SubmitEvent } from 'react';
 
 type ContactSectionProps = {
   sent: boolean;
-  onSubmit: (event: FormEvent<HTMLFormElement>) => void;
+  onSubmit: (event: SubmitEvent<HTMLFormElement>) => void;
 };
 
 export default function ContactSection({ sent, onSubmit }: ContactSectionProps) {

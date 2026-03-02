@@ -1,6 +1,6 @@
 import type { MouseEvent } from 'react';
 
-import type { NavItem, SectionId } from '@/src/_components/template/template-config';
+import { PERSON_JSON_LD, type NavItem, type SectionId } from '@/src/lib/template-data';
 import type { Theme } from '@/src/_hooks/use-theme';
 
 type NavbarProps = {
@@ -54,7 +54,7 @@ export default function Navbar({
         >
           {theme === 'dark' ? '🌙' : '☀️'}
         </button>
-        <a href="mailto:mhmmd.iqbal.june@gmail.com" className="nav-hire">
+        <a href={`mailto:${PERSON_JSON_LD.email}`} className="nav-hire">
           Hire Me
         </a>
         <button
