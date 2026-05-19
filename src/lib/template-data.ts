@@ -64,7 +64,7 @@ export const PERSON_JSON_LD = {
     addressLocality: 'Yogyakarta',
     addressCountry: 'ID',
   },
-  url: 'https://mhmmd-iqbal.dev',
+  url: 'https://mhmmd-iqbal.vercel.app',
   linkedin: 'https://linkedin.com/in/mhmmd-iqbal',
 } as const;
 
