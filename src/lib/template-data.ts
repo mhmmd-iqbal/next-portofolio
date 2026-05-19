@@ -71,20 +71,22 @@ export const PERSON_JSON_LD = {
 
 export const MARQUEE = [
   'Laravel',
+  'Livewire',
+  'Filament',
+  'CodeIgniter',
   'Node.js',
+  'AdonisJS',
+  'HapiJS',
+  'Go GIN',
   'Next.js',
   'PostgreSQL',
-  'Livewire',
-  'Socket.IO',
   'MongoDB',
-  'Filament',
   'Docker',
   'Redis',
-  'Fiber'
 ];
 
 export const SKILL_GROUPS: SkillGroup[] = [
-  { cat: 'Backend', items: ['Laravel', 'Node.js', 'Express.js', 'CodeIgniter', 'Fiber'] },
+  { cat: 'Backend', items: ['Laravel', 'CodeIgniter', 'Node.js', 'Express.js', 'AdonisJS', 'HapiJS', 'Go GIN'] },
   { cat: 'Frontend', items: ['Next.js', 'Livewire', 'Filament', 'TailwindCSS'] },
   { cat: 'Databases', items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Firebase'] },
   { cat: 'DevOps & Tools', items: ['VPS / Linux', 'CI/CD', 'Docker', 'Minio Storage', 'Supervisor'] },
