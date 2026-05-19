@@ -26,9 +26,10 @@ export default function Navbar({
 }: NavbarProps) {
   return (
     <nav id="navbar" className={isScrolled ? 'scrolled' : ''} role="navigation" aria-label="Main navigation">
-      <a href="#hero" className="nav-logo" onClick={(event) => onNavigate(event, 'hero')}>
+      {/* <a href="#hero" className="nav-logo" onClick={(event) => onNavigate(event, 'hero')}>
         MI<span>.</span>
-      </a>
+      </a> */}
+      <span className="nav-logo"></span>
 
       <ul className="nav-center" role="list">
         {navItems.map((item) => (
